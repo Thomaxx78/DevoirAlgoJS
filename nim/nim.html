@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    let allumettes = ["l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l","l"];
+
+    function moinun() {
+
+        let choisi = Math.floor(Math.random() * allumettes.length);
+        allumettes.splice(choisi, 1);
+        let text = "l";
+        document.getElementById("ewe").innerHTML = text.repeat(allumettes.length);
+      document.getElementById("awa").innerHTML = allumettes.length + " allumettes";
+
+
+        if (allumettes.length === 0) {
+            document.getElementById("ewe").innerHTML = "Vous avez retiré toutes les allumettes, c'est perdu.";
+        }
+    }
+
+    function moindeux()
+    {
+        let choisi = Math.floor(Math.random() * allumettes.length);
+        allumettes.splice(choisi, 1);
+        let choisi2 = Math.floor(Math.random() * allumettes.length);
+        allumettes.splice(choisi2, 1);
+        let text = "l";
+        document.getElementById("ewe").innerHTML = text.repeat(allumettes.length);
+      document.getElementById("awa").innerHTML = allumettes.length + " allumettes";
+
+        if (allumettes.length === 0){
+            document.getElementById("ewe").innerHTML = "Vous avez retiré toutes les allumettes, c'est perdu.";
+
+        }
+    }
+
+    function mointrois()
+    {
+        let choisi = Math.floor(Math.random() * allumettes.length);
+        allumettes.splice(choisi, 1);
+        let choisi1 = Math.floor(Math.random() * allumettes.length);
+        allumettes.splice(choisi1, 1);
+        let choisi2 = Math.floor(Math.random() * allumettes.length);
+        allumettes.splice(choisi2, 1);
+        let text = "l";
+        document.getElementById("ewe").innerHTML = text.repeat(allumettes.length);
+      document.getElementById("awa").innerHTML = allumettes.length + " allumettes";
+
+        if (allumettes.length === 0){
+            document.getElementById("ewe").innerHTML = "Vous avez retiré toutes les allumettes, c'est perdu.";
+        }
+    }
+
+  </script>
+  <div class="tout">
+
+    <h3 id="awa">30 allumettes</h3>
+  <h3 id="ewe" class="aaa"> llllllllllllllllllllllllllllll</h3>
+
+  <h3>Combien retirez-vous d'allumettes ?</h3>
+
+    <div>
+      <button id="moinsun" onclick="moinun()">1</button>
+      <button id="moinsdeux" onclick="moindeux()">2</button>
+      <button id="moinstrois" onclick="mointrois()">3</button> <br><br>
+    </div>
+
+
+
+  <form action="nim.html">
+    <button>Reset</button>
+  </form>
+  </div>
+
+</body>
+</html>
+
+<style>
+    .tout{
+        margin-top: 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border: solid black 4px;
+        border-radius: 50px;
+        width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        background-color: grey;
+        color: white;
+    }
+
+    .aaa{
+        color: beige;
+    }
+</style>
